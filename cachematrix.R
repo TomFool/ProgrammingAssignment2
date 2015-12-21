@@ -1,6 +1,6 @@
 ## makeCacheMatrix creates a list containing matrix and a null placeholder for it's inverse, as well as supporting funcitons.
 ## cacheSolve fills in the above null placeholder with the matrix inverse the first time it is called on the list.
-## If cacheSOlve is called on the list again, it will used the stored value for the inverse rather than calculating it again.
+## If cacheSolve is called on the list again, it will used the stored value for the inverse rather than calculating it again.
 
 
 
