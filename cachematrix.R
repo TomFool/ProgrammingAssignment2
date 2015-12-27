@@ -5,7 +5,7 @@
 
 
 ## makeCacheMatrix returns a 4 item list containing the inputed matrix and supporting funcitons.
-## The key supporting function here is $getsolve() which will be set to null by this function but used in cacheSolve
+## The key supporting functions here are $setsolve and $getsolve which will both initially be set to null by this function but used in cacheSolve
 
 makeCacheMatrix <- function(x = matrix()) {
   s <- NULL
@@ -25,9 +25,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve will take a 4 item list from makeCacheMatrix and store the inverse matrix in $getsolve()
-## If this is the first time cacheSolve has been called on the above list, it will calculate the inverse.
-## Otherwise, it will use the previously calculated inverse now stored within the list.
+## cacheSolve will take a 4 item list from makeCacheMatrix
+## If this is the first time cacheSolve has been called on the list, it will calculate the inverse matrix, store it in the list, and return it.
+## Otherwise, it will return the previously calculated inverse now stored within the list without calculating it again.
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
